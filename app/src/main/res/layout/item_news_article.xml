@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:cardCornerRadius="15dp"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Article Image -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/ivArticleImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/loading_icon" />
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Article Title -->
+        <TextView
+            android:id="@+id/tvArticleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caleuche_regular"
+            android:padding="8dp"
+            android:text="Is this what an early-stage slowdown looks like"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/titleHeading"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="6.50dp"
+                android:src="@drawable/journalist_ic" />
+
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="3dp"
+                android:layout_toStartOf="@id/titleDate"
+                android:layout_toEndOf="@id/titleHeading"
+                android:maxLines="1"
+                android:text="aakash"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/titleDate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="6.50dp"
+                android:layout_toStartOf="@id/tvPublishedDate"
+                android:src="@drawable/date_time_icon" />
+
+
+            <TextView
+                android:id="@+id/tvPublishedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="3dp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+        <!-- Author and Published Date -->
+
+        <!-- Description/Excerpt -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/moreBtn"
+                android:layout_width="25dp"
+                android:layout_height="27dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="6.50dp"
+                android:src="@drawable/more_icon" />
+
+            <ImageView
+                android:id="@+id/rlSource"
+                android:layout_width="25dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="6.50dp"
+                android:layout_toStartOf="@id/tvSource"
+                android:src="@drawable/news_source_icon" />
+
+
+            <TextView
+                android:id="@+id/tvSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="20dp"
+                android:maxLength="20"
+                android:fontFamily="@font/roboto_reg"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:text="NYC"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/catView"
+            android:layout_width="match_parent"
+            android:layout_height="1.30dp"
+            android:background="#dad4D4" />
+
+        <!-- Read More Button -->
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
